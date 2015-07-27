@@ -14,11 +14,13 @@ class Board
 	end
 
 	def shoot aim
-		if @co_ordinates.include?(aim)
-			@co_ordinates.delete(aim)
-			"Hit!"
-		else
-			"Miss!"
+		@co_ordinates.map! do |x|
+			if x.include?(aim)
+				x.delete(aim)
+				"Hit!"
+			else
+				"Miss!"
+			end
 		end
 	end
 end

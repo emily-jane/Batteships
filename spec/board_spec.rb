@@ -5,7 +5,7 @@ describe Board do
 		ship1 = Ship.new
 		board = Board.new
 		board.place ship1.input
-		expect(board.show_board).to eq [["A1"]]
+		expect(board.show_board).to eq ["A1"]
 	end
 
 	it 'allows player to take a shot' do
@@ -28,5 +28,4 @@ describe Board do
 		board.shoot array
 		expect(board.show_board).to eq []
 	end
-
-	it ''
+end
